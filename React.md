@@ -31,3 +31,16 @@ THrottle the number of API requests in a search
 wait for 500ms and then make the request
 setTimeout(Arrow fn, time)
 clearTimout to cancel the ctime by passing the timeoutID from the previous timer
+in the useEffect first arg func to make the effect is called and the cleanup fn can be returned
+
+Dropdown
+list of option passed as props
+state will be the currently selected option
+const [selected, setSelected] = useState(options[AnyValtoStartWith])
+onClick{() => OnSelectedChange(option)}
+
+useState to toggle open close the dropdown
+
+useRef to get reference to a DOM element
+
+DONT USE A TAG WITH REACT ROUTER
