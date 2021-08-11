@@ -44,3 +44,6 @@ useState to toggle open close the dropdown
 useRef to get reference to a DOM element
 
 DONT USE A TAG WITH REACT ROUTER
+
+Google OAuth under Google +
+OAuth ClientID

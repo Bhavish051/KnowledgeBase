@@ -57,3 +57,5 @@ Create an interface extending the CrudRepository for the methods extract data
 https://spring.io/guides/gs/accessing-data-jpa/
 
 LEARN ABOUT DEPENDENCY INJECTIONS
+Dependency injections allow for loosely coupled programming. Its a way of injecting objects into another as dependencies
+
