@@ -12,6 +12,7 @@ Controller: Controls what needs to be displayed
 
 main static html is the home page
 @RequestMapping used to display a particular mapping file like a targeted HTML File
+When that function is tagged you return the name of the html file you want to return as a String
 
 Default Home page is static html file in the resources folder
 the default / mapping goes to the index.html file in the static resources folder
@@ -30,8 +31,6 @@ Spring Beans are basically objects that form a part of the core funcationality.
 @Value is used to inject property values eg in setters or constructors
 @DependsOn to intialize another bean before the annotated one
 @Primary to annotate the most frequently used @Component to indicate that the class is a component
-
-
 
 
 @Configuration used to indicate that the class has more than one @Bean
