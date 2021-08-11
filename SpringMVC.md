@@ -41,3 +41,8 @@ Spring Beans are basically objects that form a part of the core funcationality.
 
 (mvnw clean package) to build an executable JAR file 
 (java -jar target/{JAR_FILE_NAME}) to execute the JAR file
+
+Model Contains the data of the application, can be anything strings, int etc
+
+DB Initialization
+JPA: Java Persistence API
