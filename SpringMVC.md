@@ -31,7 +31,7 @@ Spring Beans are basically objects that form a part of the core funcationality.
 @Value is used to inject property values eg in setters or constructors
 @DependsOn to intialize another bean before the annotated one
 @Primary to annotate the most frequently used @Component to indicate that the class is a component
-
+@GenerateValue to automatically generate values for example IDs
 
 @Configuration used to indicate that the class has more than one @Bean
 @PreDestroy and @PostDestroy used for beaninit and destroy methods
@@ -45,3 +45,15 @@ Model Contains the data of the application, can be anything strings, int etc
 
 DB Initialization
 JPA: Java Persistence API
+
+
+Do we use some libraries for CRUD cause the example is a hard coded sql example  : https://spring.io/guides/gs/crud-with-vaadin/
+import org.springframework.data.repository.CrudRepository;
+Accessing data using JPA
+Create an entity class with the attributes specified and getter and setter methods. 
+set the appropriate annotations such as @ID, etc
+
+Create an interface extending the CrudRepository for the methods extract data
+https://spring.io/guides/gs/accessing-data-jpa/
+
+LEARN ABOUT DEPENDENCY INJECTIONS
