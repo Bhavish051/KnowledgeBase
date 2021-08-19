@@ -37,3 +37,15 @@ Platform: Main funcationality
 
             Extensibilty: 
                 Module: Set of Extensions
+
+
+
+SAP Commerce uses Azure to host the web applications and the servers which can be remotely logged in using just a browser
+
+3 Environments
+Dev: 250GB 2*F8 VMs 1*S1
+Staging: 250GB 3*F8 VMs 1*S3
+Production: 500GB-1TB 4*F8 VMs 1*P1
+
+Use build manifest.json file to configure which properties to be used for dev, test and prod env
+
