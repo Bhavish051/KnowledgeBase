@@ -36,7 +36,7 @@ Spring Beans are basically objects that form a part of the core funcationality.
 @Configuration used to indicate that the class has more than one @Bean
 @PreDestroy and @PostDestroy used for beaninit and destroy methods
 @ComponentScan specify the base packages to check for components
-
+@Repository specifies that the class is responsible for CRUD operations
 
 (mvnw clean package) to build an executable JAR file 
 (java -jar target/{JAR_FILE_NAME}) to execute the JAR file
@@ -59,3 +59,47 @@ https://spring.io/guides/gs/accessing-data-jpa/
 LEARN ABOUT DEPENDENCY INJECTIONS
 Dependency injections allow for loosely coupled programming. Its a way of injecting objects into another as dependencies
 
+Extend Crud Repository on an interface to allow for methods like get, save, delete etc
+JPA: Java Persistence API
+
+Dependency Injections:
+Design patten to make code loosely coupled
+For objects or methods that depend on one another instead of writing code to couple them specify the dependencies in the xml file example the bean employeeDAOImpl depends on jdbcTemplate
+dependency is defined in the property attributes of the bean iteself 
+So instead of goinf new object you go for getBean
+
+
+Inversion of Controller 
+Used to manage Java Objects which are dependencies of another object
+For example, if A is depenedent on B, before creating A we would have B as a dependency so it was pass the control to B to instantiate it and then create A.
+
+Dependency injections are done with the help of inversion of control
+
+Aspect Oriented Programming
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>5.2.7.RELEASE</version>
+</dependency>
+@EnableAspectJAutoProxy
+
+Tag with @Aspect and then accordingly @Before(execution) / @After
+Types of advice/action before, after, around
+@AfterReturing: Used after a certain return value is returned
+@AfterThrowing: After an exception is thrown
+@Aroung: Both before and after 
+
+
+Aspect: The class where AOP is to be used
+Join Point:  In Spring AOP a join point is always the execution of a method.
+Advice: Advices are actions taken for a particular join point. In terms of programming, they are methods that get executed when a certain join point with matching pointcut is reached in the application. @Before, @After, @Around
+Pointcut: Pointcut is expressions that are matched with join points to determine whether advice needs to be executed or not. Pointcut uses different kinds of expressions that are matched with the join points and Spring framework uses the AspectJ pointcut expression language.
+Target Object: They are the object on which advices are applied. 
+AOP proxy: Spring AOP implementation uses JDK dynamic proxy to create the Proxy classes with target classes and advice invocations, these are called AOP proxy classes. 
+Weaving: It is the process of linking aspects with other objects to create the advised proxy objects. This can be done at compile time, load time or at runtime. Spring AOP performs weaving at the runtime.
+
+
+
+
+For adding CSS
+<link href="<c:url value="Path to file" />" rel="stylesheet">
