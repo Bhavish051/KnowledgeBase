@@ -81,3 +81,57 @@ Cloud Automation Engine handles: Environment Management, Build Management, Deplo
 2 Types of accelerators
 Industry Accelerators: Specific to a particular industry like Telco, Utilities, Financial, Citizen Engagement, Travel
 Normal Accelerators: B2B or B2C
+
+Software Architecture: 
+Azure for cloud infrastructure
+SAP Business Technology Platform to host SAP applications 
+Kubernetes: To manage Docker nodes
+
+
+Spartacus JS for decoupled Frontend
+Data Hub for to import/ export master data
+
+Cloud Hot Folders: File-based integration strategy for SAP Commerce Cloud for storing data in Azure Blob Storage which is then passed into the backend which gives the result to SAP Commerce Cloud.
+FileName mapping is important as otherwise if no match is found then Spring will keep on trying to match the same file and not moving ahead or change cloud.hotfolder.storage.header.router.resolution.required .
+
+
+SAP Commerce Accelerator
+
+Web Request Application Server Node
+Presentation Layer:
+* Servlet Components: Filters, Listeners, Dispatcher Servlet, Media Servlet
+* Spring MVC: Dispatcher Servlet, Controller, Interceptors
+* View: JSP/ JSTL
+Service Layer:
+* Facades
+* Services
+* Data Access Objects (DAO)
+Persistence Layer:
+* items.xml: Types of data access objects 
+
+Back Office Application Server Node
+Administration
+* Management Console
+* Admin Web
+* Business and Admin Cockpits ex Admin cockpit, Product cockpit, etc
+* Customer Service Cockpit
+Service Layer
+* Cron jobs: Tasks which are regularly done after some time ex backups, updating products etc
+* Task Process and Actions: Enalbe time based events or event based actions
+* Hot Folder Data import
+* DAO
+* SOLR Indexer
+Persistence Layer:
+* items.xml: Types of data access objects 
+
+
+CMS: Content Mangement System
+CMS Cockpit handles what data is shown to the customer on the website
+
+ERP Is the Product Data Source otherwise there has to be a seperate systme with the product etc master data to be integrated with SAP Commerce
+
+Uses a 3rd party payment service provider 2 options: 
+* Either route the use to the 3rd party site starightaway to avoid handling sensitive data
+* Either get credit card data from use and send it as a form to the 3rd party service provider
+
+SAP Commerce has a Fraud Detection service in built which checks the order and the customer and marks a score and checks it 
