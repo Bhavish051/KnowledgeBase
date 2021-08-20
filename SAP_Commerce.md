@@ -49,3 +49,35 @@ Production: 500GB-1TB 4*F8 VMs 1*P1
 
 Use build manifest.json file to configure which properties to be used for dev, test and prod env
 
+3 Layers
+Commerce Application: Layer where customization is done
+Environment: allocation of platform resources and services to run application
+Infrastructure: Provision Envirnment in Azure
+
+
+Runtime Architecture: 
+Cloud Portal: WebUI to set up and deploy SAP Commerce in cloud
+Cloud Automation Engine: Core, Automatic DevOps Pipeline: Environment provisioning, Build and deployment of SAP Commerce solution, Scaling
+
+
+3 Layers of General Software
+Presentation
+Business
+Persistence
+Database
+
+Build and Deploy Process: 
+Link a git repo
+Builds a docker image from the git repo and the SAP Code Repo
+One for each component such as storefront, Solr, Apache,etc
+Cloud poral for basic build information such as git repo etc
+Manifest.json at root of repo for build config
+Operator is responsible for building docker container into a kubernetes cluster on top of VMs in Azure
+Horizontal Scaling only determined by application alerts automatically
+
+Cloud Portal: Self Service Portal for customers
+Cloud Automation Engine handles: Environment Management, Build Management, Deployment Management, Logging, Backups and Snapshots, Disaster Recovery, Scaling, Monitoring 
+
+2 Types of accelerators
+Industry Accelerators: Specific to a particular industry like Telco, Utilities, Financial, Citizen Engagement, Travel
+Normal Accelerators: B2B or B2C
