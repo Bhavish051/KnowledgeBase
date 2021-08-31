@@ -60,7 +60,7 @@ Cloud Portal: WebUI to set up and deploy SAP Commerce in cloud
 Cloud Automation Engine: Core, Automatic DevOps Pipeline: Environment provisioning, Build and deployment of SAP Commerce solution, Scaling
 
 
-3 Layers of General Software
+4 Layers of General Software
 Presentation
 Business
 Persistence
@@ -81,6 +81,7 @@ Cloud Automation Engine handles: Environment Management, Build Management, Deplo
 2 Types of accelerators
 Industry Accelerators: Specific to a particular industry like Telco, Utilities, Financial, Citizen Engagement, Travel
 Normal Accelerators: B2B or B2C
+
 
 Software Architecture: 
 Azure for cloud infrastructure
@@ -135,3 +136,30 @@ Uses a 3rd party payment service provider 2 options:
 * Either get credit card data from use and send it as a form to the 3rd party service provider
 
 SAP Commerce has a Fraud Detection service in built which checks the order and the customer and marks a score and checks it 
+
+B2B
+4 Roles
+* Admin b2badmingroup
+* Manager b2bmanagergroup
+* Approver b2bapprovergroup
+* Customer b2bcustomergroup
+
+Add functionalities in localextensions.xml
+
+ant modulegen to create custom modules from templates
+ant extgen to create custom extensions from templates
+
+add <meta key="extgen-template-extension" value="true"/> to the extensioninfo.xml file to enable to make an extension or module into a customer one
+
+Catalog Versions are made of multiple categories,
+A Catalog is made of different catalog versions and only one catalog version can be active at a particular time.
+For multiple webfronts set up multiple catalogs
+
+PCM: Product Content Management
+PIM: Product Information Management
+
+PCM to hold basic data like title and description whereas PIM has a wider set of features to distribute the data into retail and marketplace channels
+
+SAP Product Content Hub:
+    PIM Component 
+    Cloud Data Feed Management and Data Syndication service
